@@ -57,7 +57,7 @@ class PatientController extends Controller
             ],
             'sex' => ['required', Rule::in(['Male', 'Female'])],
             'contact_number' => ['nullable', 'string', 'max:30'],
-            'address' => ['nullable', 'string'],
+            'address' => ['nullable', 'string', 'max:2000'],
         ]);
 
         Patient::create($validated);
@@ -96,7 +96,7 @@ class PatientController extends Controller
             ],
             'sex' => ['required', Rule::in(['Male', 'Female'])],
             'contact_number' => ['nullable', 'string', 'max:30'],
-            'address' => ['nullable', 'string'],
+            'address' => ['nullable', 'string', 'max:2000'],
         ]);
 
         $patient->update($validated);
