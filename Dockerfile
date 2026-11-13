@@ -1,3 +1,4 @@
+
 FROM node:22-bookworm-slim AS frontend
 
 WORKDIR /app
@@ -84,4 +85,4 @@ RUN chmod +x /usr/local/bin/docker-entrypoint
 
 EXPOSE 10000
 
-ENTRYPOINT ["docker-entrypoint"]
+ENTRYPOINT ["/bin/sh", "/usr/local/bin/docker-entrypoint"]
